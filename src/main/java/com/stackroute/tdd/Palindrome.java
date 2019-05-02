@@ -4,11 +4,8 @@ package com.stackroute.tdd;
 public class Palindrome {
     int sum = 0;
 
-    public int pal(int number) {
+    public int palindromeMethod(int number) {
         int temporary, reverse = 0, remainder, x;
-        // System.out.println("Enter the number");
-        //  Scanner input = new Scanner(System.in);
-        //  number = input.nextInt();
         temporary = number;//assign the number to a temporary variable
         while (number != 0) //reversing the number
         {
@@ -26,10 +23,10 @@ public class Palindrome {
                 }
                 temporary = temporary / 10;
             } while (temporary != 0);
-            if(sum>25) {
+            if(sum>25) {//check for condition if sum is greater than 25
                 System.out.printf("it palindrome and sum of even numbers is greater than 25\n", sum);
             }
-            else{
+            else{//condition fails
                 System.out.printf("it is palindrome and sum of even numbers is less than 25 \n",sum);
             }
 

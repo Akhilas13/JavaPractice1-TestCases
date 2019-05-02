@@ -7,31 +7,40 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CapitalTest {
-    Capital c;
+    Capital lettercase;
 
     @Before
     public void setUp() throws Exception {
-        c=new Capital();
+        lettercase=new Capital();
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() throws Exception {\
+        lettercase=null;
     }
 
     @Test
-    public void uppercase() {
-        assertEquals(0,c.letter('A'));
+    public void testUppercase()
+    {
+        assertEquals(0,lettercase.letter('A'));
 
     }
     @Test
-    public void lowercase() {
-        assertEquals(0,c.letter('a'));
+    public void testLowercase()
+    {
+        assertEquals(0,lettercase.letter('a'));
 
     }
     @Test
-    public void digit() {
-        assertEquals(0,c.letter("6"));
+    public void testDigit()
+    {
+        assertEquals(0,lettercase.letter('6'));
 
     }
+    @Test
+    public void testSymbol(){
+        assertEquals(0,lettercase.letter('}'));
+    }
+
 
 }

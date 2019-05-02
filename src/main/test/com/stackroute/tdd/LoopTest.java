@@ -7,23 +7,25 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LoopTest {
-    Loop l;
+    Loop patterns;
     @Before
     public void setUp() throws Exception {
-        l=new Loop();
+        patterns=new Loop();
     }
 
     @After
     public void tearDown() throws Exception {
+        patterns=null;
     }
 
     @Test
-    public void pattern() {
-        assertEquals(0,l.pattern(5));
+    public void  testPattern()
+    {
+        assertEquals(0,patterns.pattern(5));
 
     }
     @Test
-    public void error(){
-        assertEquals(0,l.pattern(0));
+    public void testError(){
+        assertEquals(0,patterns.pattern(0));
     }
 }

@@ -7,41 +7,42 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PalindromeTest {
-    Palindrome p;
+    Palindrome number;
 
     @Before
     public void setUp() throws Exception {
-        p=new Palindrome();
+        number=new Palindrome();
     }
 
     @After
     public void tearDown() throws Exception {
+        number=null;
     }
 
     @Test
-    public void palindromeLesser() throws Exception {
-        assertEquals(4,p.pal(1221));
+    public void testPalindromeLesser() throws Exception {
+        assertEquals(4,number.palindromeMethod(1221));
     }
     @Test
-    public void palindromeGreater() throws Exception{
+    public void testPalindromeGreater() throws Exception{
 
-        assertEquals(32, p.pal(8888));
+        assertEquals(32, number.palindromeMethod(8888));
     }
 
     @Test
-    public void notPalindrome() throws Exception{
+    public void testNotPalindrome() throws Exception{
 
-        assertEquals(0,p.pal(0221));
+        assertEquals(0,number.palindromeMethod(0221));
     }
     @Test
-    public void singledigitPalindrome() throws Exception{
+    public void testSingledigitPalindrome() throws Exception{
 
-        assertEquals(0,p.pal(5));
+        assertEquals(0,number.palindromeMethod(5));
     }
     @Test
-    public void oddNumberPalindrome() throws Exception{
+    public void testOddNumberPalindrome() throws Exception{
 
-        assertEquals(0,p.pal(333));
+        assertEquals(0,number.palindromeMethod(333));
     }
 
 

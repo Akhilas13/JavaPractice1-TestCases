@@ -7,33 +7,34 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class VowelTest {
-    Vowel v;
+    Vowel alphabet;
 
     @Before
     public void setUp() throws Exception {
-        v=new Vowel();
+        alphabet=new Vowel();
     }
 
     @After
     public void tearDown() throws Exception {
+        alphabet=null;
     }
 
     @Test
-    public void smallVowel() {
-        assertEquals(0,v.letter("e"));
+    public void testSmallVowel() {
+        assertEquals(0,alphabet.letter("e"));
     }
     @Test
-    public void largeVowel(){
-        assertEquals(0,v.letter("o"));
+    public void testLargeVowel(){
+        assertEquals(0,alphabet.letter("o"));
     }
     @Test
-    public void smallConsonant(){
-        assertEquals(0,v.letter("y"));
+    public void testSmallConsonant(){
+        assertEquals(0,alphabet.letter("y"));
     }
 
     @Test
-    public void  largeConsonant(){
-        assertEquals(0,v.letter("R"));
+    public void  testLargeConsonant(){
+        assertEquals(0,alphabet.letter("R"));
 
     }
 

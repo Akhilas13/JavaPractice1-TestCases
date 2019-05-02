@@ -3,11 +3,11 @@ package com.stackroute.tdd;
 public class Vowel {
 
 
-    public int letter(String str) {
+    public int letter(String alphabet) {
         int i;
-        int len = str.length();
+        int len = alphabet.length();
         for (i = 0; i < len; i++) {
-            char ch = str.charAt(i);
+            char ch = alphabet.charAt(i);
             if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') //checks for vowels
             {
                 System.out.println("vowel ");
